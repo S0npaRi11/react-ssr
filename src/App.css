@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Urbanist';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-primary{
+    background-color: #FAFAFF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-primary{
+    color: #554640;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-green{
+    color: #32965D;
 }
 
-.App-link {
-  color: #61dafb;
+.text-yellow{
+    color: #FFED66;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-red{
+    color: #FF5E5B;
+}
+
+.container{
+    padding: 50px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+    column-gap: 50px;
+    row-gap: 50px;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+}
+
+.movie-card{
+    /* border: #554640 0.2px solid; */
+    /* border-radius: 5px; */
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 9px -3px rgba(0,0,0,0.32);
+}
+
+.movie-thumbnail{
+    width: 100%;
+    height: 295px;
+    object-fit: cover;
+}
+
+.movie-details{
+    padding: 10px;
+}
+
+.movie-title{
+    text-decoration: none;
+    display: block;
+    color: #554640;
+    padding: 10px 0;
+    font-size: 25px;
+}
+
+.movie-rating, .info-rating{
+    padding: 10px 0;
+}
+
+.movie-language{
+    padding-bottom: 10px;
+}
+
+.movie-genre, .info-genre{
+    padding-bottom: 10px;
+}
+
+.movie-genre ul, .info-genre ul {
+    display: inline;
+}
+
+.movie-genre ul li, .info-genre ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: #554640 1px solid;
+    border-radius: 3px;
+    background-color: #554640;
+    color: #FAFAFF;
+    font-size: 14px;
+}
+
+.movie-runtime, .info-runtime{
+    padding-bottom: 10px;
+}
+
+.movie-premered, .info-premered{
+    padding-bottom: 10px;
+}
+
+.info-card{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    /* column-gap: 50px; */
+    row-gap: 50px;
+    min-height: 100vh;
+}
+
+.info-thumbnail{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-details{
+    padding: 100px;
+}
+
+.info-title{
+    font-size: 3rem;
+    padding: 25px 0;
+}
+
+.info-language{
+    padding-bottom: 10px;
+}
+
+.info-country{
+    padding:  10px 0;
+}
+
+@media only screen and (max-width: 900px){
+    .mgrid{
+        display: grid;
+        grid-template-columns: auto !important;
+    }
+
+    .info-details{
+        padding: 50px !important;
+    }
+
+    .info-card{
+        height: auto;
+        /* padding: 50px !important; */
+    }
+
+    .reverce-grid{
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
