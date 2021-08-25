@@ -139,6 +139,7 @@
     .mgrid{
         display: grid;
         grid-template-columns: auto !important;
+        row-gap: 25px;
     }
 
     .info-details{
@@ -153,5 +154,9 @@
     .reverce-grid{
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    .info-thumbnail{
+        height: 70vh;
     }
 }
