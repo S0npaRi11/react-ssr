@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.css';
 
@@ -10,7 +10,7 @@ import Error500 from './Pages/error500';
 
 function App() {
   return (
-    <Router basename="tv-shows">
+    <Router basename="/tv-shows">
       <Switch>
 
         <Route exact path="/">
