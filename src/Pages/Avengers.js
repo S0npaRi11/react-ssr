@@ -26,7 +26,7 @@ const Avengers = () => {
 
     return (
         <div className="container bg-primary">
-            <div className="grid">
+            <div className="grid mgrid">
                 {shows.map(s => (
                     <Card key={s.show.id} showData={s} />
                 ))}
